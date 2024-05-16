@@ -48,5 +48,5 @@ Link : https://github.com/namtoptall/DSP303x_1.2-A_VN-asm2.git
 #### Ngoài ra, F1 score phải lớn hơn **0.66**, Jaccard similarity score phải lớn hơn **0.5** với soft voting và F1 score trên phải lớn hơn **0.57**, Jaccard similarity score phải lớn hơn **0.45** với hard voting 
 | Algorithm |Jaccard-testing | F1-score-testing |
 |-----------|----------------|------------------|
-| Hard Voting | 0.500000 | 0.666667 |
-| Soft Voting | 0.521739 | 0.685714 |
+| Hard Voting | 0.500000 | 0.666665 |
+| Soft Voting | 0.52 | 0.69 |
