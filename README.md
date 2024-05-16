@@ -1,5 +1,6 @@
 # DSP303x_1.2-A_VN-asm2
-*note* : 
+*note* : phần lớn thời gian làm bài, em sử dụng github codespace để đỡ tổn hại CPU máy. 
+Link : https://github.com/namtoptall/DSP303x_1.2-A_VN-asm2.git
 #### So với yêu cầu đề bài : 
 ##### Bạn phải cố gắng TINH CHỈNH ÍT NHẤT 3 SIÊU THAM SỐ trên mỗi thuật toán, ngoại trừ soft voting và hard voting.
 ### Với model Knn, em sử dụng 4 tham số, bao gồm : 
@@ -28,14 +29,12 @@
 - ```tol```: The algorithm stops when the improvement in the optimization objective is smaller than this threshold. Lower values mean the algorithm will run until it reaches a very precise solution, potentially taking longer.
 - ```max_iter```: This sets a limit on the number of iterations the solver will take to find a solution. Higher values allow the solver more time to converge to a solution, which might be necessary for complex models or large datasets.
 ### Với Neural Network, em sử dụng 6 tham số: 
-- ```learning_rate```: learning_rate of the optimization algorithm 
-- ```units```: number of neurons in each hidden layers 
-- ```layers```: numbher of hidden layers in the model 
-- ```activation```: function use to activate between layers 
-- ```solver```: algorithm to find the most optimal optimization
-- ```alpha```: L2 regularization 
-- ```beta1, beta2, epsilon```: Adam optimization parameters 
-- ```hidden_layer_size```: the size of hidden layer 
+- ```hidden_layer_sizes```: Specifies the architecture of the neural network. Each tuple represents the number of neurons in each hidden layer. For example, `(32, 32)` means two hidden layers with 32 neurons each. 
+- ```activation```: function use to activate between layers whether ```relu``` or ```tanh``` 
+- ```solver```: The solver for weight optimization. Whether ```Adam``` or ```sgd```
+- ```alpha```: This parameter helps prevent overfitting by adding a penalty for larger weights in the model. Smaller values mean less regularization.
+- ```learning_rate_init``` : The starting learning rate for the weight updates. Higher values may converge faster but can overshoot minima, while lower values are more precise but take longer to converge.
+- ```max_iter```: The maximum number of iterations the solver will run for. More iterations allow for more training epochs, which may improve model performance if it hasn't converged yet.
 ##### Ngoài ra, đề bài còn yêu cầu : 
 - F1 score trên dữ liệu kiểm tra phải cao hơn **0.6**, Jaccard score phải cao hơn **0.4** với *KNN* | *Decision Tree* | *SVM* | *Logistic Regression* | *Neural Network* Trên tập dữ liệu kiểm tra (testing)
 ### Kết quả : 
